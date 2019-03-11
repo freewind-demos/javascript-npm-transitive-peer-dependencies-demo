@@ -1,28 +1,13 @@
-JavaScript Npm Peer Dependencies "*" Demo
-=========================================
+JavaScript Npm Transitive Peer Dependencies Demo
+================================================
 
-当peerDependencies声明为`*`时，表示任意一个版本都可以，而不是指最新的版本。
+当一个package以`devDependencies`的形式使用了另一个package时，通常也需要把另一个package同时也声明为
+`peerDependencies`，这样当最终的app使用了某个package时，所有的`peerDependencies`都会提示安装，
+当它们被安装时，它们自己声明的`peerDependencies`也会被提醒，这样就不会漏掉了。
 
-比如在本demo中，在package.json中声明了：
-
-```
-"peerDependencies": {
-  "lodash": "*"
-}
-```
-
-同时在`dependencies`中使用了旧版本的lodash:
-
-```
-"lodash": "3.10.1",
-```
-
-（注：当前最新版本为`4.17.11`）
-
-然后执行：
+本Demo演示了这个过程。其中`package1`和`package2`都以`npm publish`的形式发布到了npmjs上了。
 
 ```
 npm install
+npm run demo
 ```
-
-不会有相关的警告。

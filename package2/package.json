@@ -1,0 +1,11 @@
+{
+  "name": "javascript-npm-transitive-peer-dependencies-demo--package2",
+  "version": "0.1.5",
+  "devDependencies": {
+    "lodash": "4.17.11",
+    "javascript-npm-transitive-peer-dependencies-demo--package1": "0.1.1"
+  },
+  "peerDependencies": {
+    "javascript-npm-transitive-peer-dependencies-demo--package1": "0.1.1"
+  }
+}

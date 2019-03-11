@@ -3,9 +3,8 @@
     "demo": "node hello.js"
   },
   "dependencies": {
-    "lodash": "3.10.1"
-  },
-  "peerDependencies": {
-    "lodash": "*"
+    "javascript-npm-transitive-peer-dependencies-demo--package2": "0.1.5",
+    "javascript-npm-transitive-peer-dependencies-demo--package1": "0.1.1",
+    "lodash": "4.17.11"
   }
 }
