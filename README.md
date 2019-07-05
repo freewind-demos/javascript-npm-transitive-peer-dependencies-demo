@@ -11,3 +11,10 @@ JavaScript Npm Transitive Peer Dependencies Demo
 npm install
 npm run demo
 ```
+
+注意：
+
+这里有一个疑问，就是package2中以`devDependencies`的方式使用了`package1`中的`peerDependencies`->`lodash`，
+那么`package2`是否也需要将`lodash`声明为`peerDependencies`？
+
+答案是不用。因为安装`package2`就需要安装`package1`，自然就提示需要安装`lodash`了。
